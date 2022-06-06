@@ -99,9 +99,8 @@
 </template>
 
 <script lang="ts">
-import { Options, Vue } from "vue-class-component";
+import { Vue } from "vue-class-component";
 import { Prop } from "vue-property-decorator";
-import PokemonList from "@/components/PokemonList.vue";
 
 interface Pokemon {
   url: string;
@@ -126,11 +125,6 @@ interface Stats {
   };
 }
 
-@Options({
-  components: {
-    PokemonList,
-  },
-})
 export default class ModalComponent extends Vue {
   @Prop({ default: "" })
   url!: string;
